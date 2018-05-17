@@ -1,0 +1,373 @@
+
+
+// color variables
+$teal: #009dc1;
+$red: #ff130d;
+
+$green: #006842;
+$green-light: rgba( $green, .1 );
+
+$grey: #434A54;
+$grey-light: lighten( $grey, 40% );
+
+$navy: #082D4B;
+
+$orange: #F47D20;
+
+$tan: #F0EDDD;
+
+@import "reset";
+
+@import "fonts";
+
+@import "mixins";
+
+@import "base";
+
+@import "grid";
+
+
+body {
+	background-color: lighten( $tan, 10% );
+}
+
+
+sup {
+	font-size: 50%;
+	vertical-align: super;
+}
+
+
+img {
+	&.image-left {
+		float: left;
+		margin: 0 10px 10px 0;
+	}
+	&.image-right {
+		float: right;
+		margin: 0 0 10px 10px;
+	}
+}
+
+
+// colors
+.bg-teal { background: $teal; }
+.bg-green { background: $green; }
+.bg-green-light { background: $green-light; }
+.bg-red { background: $red; }
+.bg-grey { background: $grey; }
+.bg-grey-light { background: $grey-light; }
+.bg-navy { background: $navy; color: white; }
+.bg-orange { background: $orange; }
+
+.text-teal { color: $teal; }
+.text-green { color: $green; }
+.text-green-light { color: $green-light; }
+.text-red { color: $red; }
+.text-grey { color: $grey; }
+.text-grey-light { color: $grey-light; }
+.text-navy { color: $navy; }
+.text-orange { color: $orange; }
+
+
+// background-container
+.container {
+	background: url(../img/bg-body.jpg) center center repeat-x;
+	background-size: cover;
+	max-width: 1100px;
+	margin: 0 auto;
+	box-shadow: 0 0 20px rgba( black, .4 );
+}
+
+
+// wrap div
+.wrap {
+	max-width: 1100px;
+	margin: 0 auto;
+	position: relative;
+	@include clearfix;
+}
+
+
+// header styles
+header {
+	position: relative;
+	text-align: center;
+
+	img {
+		display: block;
+	}
+}
+
+
+
+// intro font size
+.intro {
+	font-size: 1.4em;
+	line-height: 1.6em;
+	padding: 20px;
+	color: lighten( $grey, 20% );
+
+	@include respond-to( 768px ) {
+		font-size: 1.6em;
+		padding: 40px 20px 20px 20px;
+	}
+
+	@include respond-to( 1024px ) {
+		font-size:  1.8em;
+	}
+
+	p {
+		padding: 10px 0;
+
+		@include respond-to( 768px ) {
+			padding: 20px 0;
+		}
+	}
+}
+
+
+
+.big-buttons {
+	text-align: center;
+	padding-bottom: 30px;
+	@include clearfix;
+
+	@include respond-to( 768px ) {
+		img.big-button {
+			max-width: 45%;
+			margin-left: 5%;
+
+			&.first {
+				margin-left: 0;
+			}
+		}
+	}
+}
+
+
+
+// tool styles
+.content {
+	padding: 20px;
+
+	@include respond-to( 768px ) {
+		padding: 30px 40px;
+	}
+
+	@include respond-to( 1024px ) {
+		padding: 40px 60px;
+	}
+
+	h2 {
+		@include font-bold;
+		font-size: 1.8em;
+		line-height: 1.4em;
+	}
+
+	h3 {
+		@include font-bold;
+		font-size: 1.3em;
+		line-height: 1.4em;
+		padding: 20px 0 10px 0;
+	}
+
+	.infographic {
+		@include respond-to( 768px ) {
+			padding: 30px 0;
+		}
+
+		@include respond-to( 1024px ) {
+			padding: 60px 0;
+		}
+	}
+
+	.bullet-image {
+		float: left;
+		width: 10%;
+		clear: left;
+		text-align: right;
+		padding: 8px 0;
+
+		@include respond-to( 768px ) {
+			width: 5%;
+		}
+	}
+
+	.bullet-text {
+		float: left;
+		width: 90%;
+		padding: 10px;
+
+		@include respond-to( 768px ) {
+			width: 95%;
+		}
+	}
+
+	.three-quarter {
+		padding: 0 30px 0 0;
+	}
+
+	.more-info {
+		padding: 30px 0 0;
+
+		@include respond-to( 768px ) {
+			padding: 50px 0 0;
+		}
+
+		h2 {
+			color: $green;
+		}
+	}
+
+	ul {
+		list-style-type: disc;
+		padding: 5px 0 5px 25px;
+
+		li {
+			padding: 5px 0;
+		}
+	}
+}
+
+
+
+// button styles
+input[type=submit], button, .btn {
+	@include font-title;
+	padding: 15px;
+	background-color: $orange;
+	background-position: left center;
+	background-repeat: repeat-y;
+	color: white;
+	border: 0;
+	border-radius: 10px;
+	font-size: 1.4em;
+	line-height: 1.4em;
+	width: 100%;
+	box-sizing: border-box;
+	text-transform: uppercase;
+	display: block;
+	cursor: pointer;
+	text-align: center;
+	position: relative;
+	margin: 5px auto 15px;
+	box-shadow: 3px 3px 25px darken( $navy, 10% );
+
+	@include respond-to( 768px ) {
+		max-width: 40%;
+	}
+
+	span {
+		display: block;
+	}
+	
+	&:after {
+		content: "";
+		position: absolute;
+		right: 5px;
+		top: 50%;
+		width: 30px;
+		height: 30px;
+		margin-top: -15px;
+	}
+
+	&:hover {
+		opacity: .9;
+		color: white;
+	}
+
+	&.go-back {
+		background-color: lighten( $grey, 20% );
+		font-size: 1.5em;
+		color: white;
+	}
+
+	&.calculate, &.apply {
+		background-color: $teal;
+	}
+}
+
+
+textarea {
+	height: 234px;
+
+	@include respond-to( 1024px ) {
+		height: 241px;
+	}
+}
+
+
+.contact-title {
+	margin-top: 30px;
+	font-size: 1.5em;
+	padding: 20px 0;
+
+	h3 {
+		padding: 0 20px;
+		color: white;
+
+		@include respond-to( 768px ) {
+			padding: 10px 40px;
+		}
+	}
+}
+
+
+.contact {
+	padding: 20px;
+	@include clearfix;
+
+	.half:first-child {
+		padding-left: 0;
+	}
+
+	.error {
+		padding: 0 20px;
+		@include font-bold;
+	}
+
+	@include respond-to( 768px ) {
+		padding: 20px 0 40px 0;
+	}
+}
+
+
+.buttons {
+	padding: 0 20px;
+}
+
+
+.footer-bar {
+	padding: 40px 20px 20px 20px;
+
+	img {
+		opacity: .7;
+		transition: 400ms opacity ease-in-out;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
+
+
+.fine-print {
+	padding: 20px 20px 30px 20px;
+	font-size: .8em;
+	line-height: 1.3em;
+	text-align: left;
+	color: darken( $grey, 30% );
+	transition: 400ms all ease-in-out;
+	opacity: .5;
+	text-align: right;
+
+	&:hover {
+		opacity: 1;
+	}
+
+	@include respond-to( 1120px ) {
+		padding: 20px 0;
+	}
+}
+

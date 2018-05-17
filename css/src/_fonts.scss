@@ -1,0 +1,90 @@
+
+
+// include our fonts
+@font-face {
+    font-family: 'Avenir Next Condensed bold';
+    src: url('fonts/avenir-next-condensed-bold.eot');
+    src: url('fonts/avenir-next-condensed-bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/avenir-next-condensed-bold.woff2') format('woff2'),
+        url('fonts/avenir-next-condensed-bold.woff') format('woff'),
+        url('fonts/avenir-next-condensed-bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next Condensed italic';
+    src: url('fonts/avenir-next-condensed-italic.eot');
+    src: url('fonts/avenir-next-condensed-italic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/avenir-next-condensed-italic.woff2') format('woff2'),
+        url('fonts/avenir-next-condensed-italic.woff') format('woff'),
+        url('fonts/avenir-next-condensed-italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next Condensed';
+    src: url('fonts/avenir-next-condensed.eot');
+    src: url('fonts/avenir-next-condensed.eot?#iefix') format('embedded-opentype'),
+        url('fonts/avenir-next-condensed.woff2') format('woff2'),
+        url('fonts/avenir-next-condensed.woff') format('woff'),
+        url('fonts/avenir-next-condensed.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next Condensed Bold Italic';
+    src: url('fonts/avenir-next-condensed-bold-italic.eot');
+    src: url('fonts/avenir-next-condensed-bold-italic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/avenir-next-condensed-bold-italic.woff2') format('woff2'),
+        url('fonts/avenir-next-condensed-bold-italic.woff') format('woff'),
+        url('fonts/avenir-next-condensed-bold-italic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next Condensed Medium';
+    src: url('fonts/avenir-next-condensed-medium.eot');
+    src: url('fonts/avenir-next-condensed-medium.eot?#iefix') format('embedded-opentype'),
+        url('fonts/avenir-next-condensed-medium.woff2') format('woff2'),
+        url('fonts/avenir-next-condensed-medium.woff') format('woff'),
+        url('fonts/avenir-next-condensed-medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+
+// sans-serif mixin
+@mixin font-title {
+    font-family: "Avenir Next Condensed Bold", sans-serif;
+}
+
+// sans-serif mixin
+@mixin font {
+	font-family: "Avenir Next Condensed", sans-serif;
+}
+
+// bold italic
+@mixin font-italic {
+    font-family: "Avenir Next Condensed Italic", sans-serif;
+}
+
+// bold face
+@mixin font-bold {
+	font-family: "Avenir Next Condensed Bold", sans-serif;
+}
+
+// bold italic
+@mixin font-bold-italic {
+    font-family: "Avenir Next Condensed Bold Italic", sans-serif;
+}
+
+// bold italic
+@mixin font-medium {
+    font-family: "Avenir Next Condensed Medium", sans-serif;
+}
+
